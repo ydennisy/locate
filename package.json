@@ -1,0 +1,16 @@
+{
+  "name": "miq-fs-app",
+  "version": "0.0.1",
+  "description": "foursquare app",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Yurkevich",
+  "license": "ISC"
+}
