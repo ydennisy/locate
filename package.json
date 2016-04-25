@@ -1,6 +1,6 @@
 {
   "name": "miq-fs-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "foursquare app",
   "main": "app.js",
   "dependencies": {
@@ -15,5 +15,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dennis Yurkevich",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydennisy/locate.git"
+  },
+  "keywords": [
+    "locate"
+  ],
+  "bugs": {
+    "url": "https://github.com/ydennisy/locate/issues"
+  },
+  "homepage": "https://github.com/ydennisy/locate#readme"
 }
