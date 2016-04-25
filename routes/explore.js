@@ -6,7 +6,6 @@ var express = require('express');
 var jsonexport = require('jsonexport');
 var config = require('../config/config');
 var latLongs = require('../config/ll');
-var async = require('async');
 var delKey = require('key-del');
 
 var router = express.Router();
