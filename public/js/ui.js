@@ -1,7 +1,7 @@
 function submitQuery() {
   var inputData = document.getElementById('userQuery').value;
   console.log(inputData);
-  httpGet('http://locate.mediaiqdigital.com/explore/' + inputData)
+  httpGet('http://locate.mediaiqdigital.com:3000/explore/' + inputData)
 }
 
 function stopDefAction(evt) {
@@ -22,7 +22,7 @@ document.getElementById('buttonSubmit').addEventListener(
 
 
 $("#getFiles").click(function(){
-    $.getJSON("http://locate.mediaiqdigital.com/getFiles", function(result){
+    $.getJSON("http://locate.mediaiqdigital.com:3000/getFiles", function(result){
         $.each(result, function(i, fileLocation){
             $("#results").append('<li><a href=' + fileLocation + '>' + fileLocation + '</a></li>');
         });
