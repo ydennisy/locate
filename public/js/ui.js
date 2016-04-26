@@ -11,7 +11,7 @@ function stopDefAction(evt) {
 
 function httpGet(theUrl){
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, true );
+    xmlHttp.open( 'GET', theUrl, true );
     xmlHttp.send();
     return xmlHttp.responseText;
 }
@@ -20,11 +20,10 @@ document.getElementById('buttonSubmit').addEventListener(
     'click', stopDefAction, false
 );
 
-
-$("#getFiles").click(function(){
-    $.getJSON("http://locate.mediaiqdigital.com:3000/getFiles", function(result){
+$('#getFiles').click(function(){
+    $.getJSON('http://locate.mediaiqdigital.com:3000/getFiles/', function(result){
         $.each(result, function(i, fileLocation){
-            $("#results").append('<li><a href=' + fileLocation + '>' + fileLocation + '</a></li>');
+            $('#results').append('<li><a href=' + fileLocation + '>' + fileLocation + '</a></li>');
         });
     });
 });
