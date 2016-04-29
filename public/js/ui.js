@@ -1,7 +1,9 @@
+var locationOfScript = window.location.href;
+
 function submitQuery() {
   var inputData = document.getElementById('userQuery').value;
   console.log(inputData);
-  httpGet('http://locate.mediaiqdigital.com:3000/explore/' + inputData)
+  httpGet(locationOfScript + 'explore/' + inputData)
 }
 
 function stopDefAction(evt) {
@@ -20,10 +22,13 @@ document.getElementById('buttonSubmit').addEventListener(
     'click', stopDefAction, false
 );
 
-$('#getFiles').click(function(){
-    $.getJSON('http://locate.mediaiqdigital.com:3000/getFiles/', function(result){
-        $.each(result, function(i, fileLocation){
-            $('#results').append('<li><a href=' + fileLocation + '>' + fileLocation + '</a></li>');
-        });
-    });
-});
+  $('#getFiles').click(function(){
+    setTimeout(function(){
+      $('#results').empty();
+      $.getJSON(locationOfScript + 'getFiles/', function(result){
+          $.each(result, function(i, fileLocation){
+              $('#results').append('<li><a href=' + fileLocation + '>' + fileLocation + '</a></li>');
+          });
+      });
+    }, 500);
+  });

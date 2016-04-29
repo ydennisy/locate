@@ -1,22 +1,29 @@
 <head>
-
-
 </head>
 <body>
-  <form class="form-inline">
-  <div class="form-group">
-    <label for="locationSearch">Location Search: </label>
-    <input id='userQuery' class="form-control input-lg" type="text" placeholder="Starbucks">
+<div class = 'container'>
+  <h1>Locate FourSquare UI</h1>
+  <h6>v 0.0.2</h>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for..." id='userQuery'>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id='buttonSubmit'>Execute Your Query !</button>
+            <button class="btn btn-default" type="button" id='getFiles'>Collect Your Data !</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <br>
+
+    <p>Currently the UI supports only UK queries, please attempt to 'Retrieve Data' again if your query is not present in the file list.</p>
+    <ul id='results'></ul>
+
   </div>
-  <button type="submit" class="btn btn-default" id='buttonSubmit'>Get To Da Choppa!</button>
-</form>
-
-<button type="submit" class="btn btn-default" id='getFiles'>Get Files!</button>
-
-<ul id='results'></ul>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!-- Optional theme -->
@@ -24,8 +31,4 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src='./js/ui.js'></script>
-
-
-
-
 </body>

@@ -12,6 +12,7 @@ var router = express.Router();
 var userFileName = '';
 
 router.get('/:place', function(req, res) {
+  console.log(req.url + ' ' + req.method);
   var masterDataArray = [];
   var userQuery = req.params.place;
   var reqCounter = 0;
