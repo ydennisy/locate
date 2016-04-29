@@ -6,7 +6,7 @@ var getFiles = require('./routes/getFiles');
 
 var app = express();
 
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 80);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
