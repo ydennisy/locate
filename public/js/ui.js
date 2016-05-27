@@ -2,8 +2,9 @@ var locationOfScript = window.location.href;
 
 function submitQuery() {
   var inputData = document.getElementById('userQuery').value;
+  var inputCountry = document.getElementById('userCountry').value;
   console.log(inputData);
-  httpGet(locationOfScript + 'explore/' + inputData)
+  httpGet(locationOfScript + 'explore/' + inputData + '/' + inputCountry)
 }
 
 function stopDefAction(evt) {
